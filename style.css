@@ -1,0 +1,296 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --------- COLORS ------------- */
+  /* PRIMARY */
+  --MAIN-DASHBOARD-HCOLOR: hsl(246, 80%, 60%); /* BLUE */
+  --WORK-HCOLOR: hsl(15, 100%, 70%); /* LIGHT RED */
+  --PLAY-HCOLOR: hsl(195, 74%, 62%); /* SOFT BLUE */
+  --STUDY-HCOLOR: hsl(348, 100%, 68%); /* LIGHT RED */
+  --EXERCISE-HCOLOR: hsl(145, 58%, 55%); /* LIME GREEN */
+  --SOCIAL-HCOLOR: hsl(264, 64%, 52%); /* VIOLET */
+  --SELF-CARE-HCOLOR: hsl(43, 84%, 65%); /* SOFT ORANGE */
+  --MAIN-FONT-COLOR: white;
+
+  /* NEUTRAL */
+  --BODY-BACKGROUND: hsl(226, 43%, 10%); /* VERY DARK BLUE */
+  --DASH-BOARD-BG: hsl(235, 46%, 20%); /* DARK BLUE */
+  --DASHBOARD-HOVER: hsl(235, 45%, 61%); /* DESATURATED-BLUE */
+  --PALE-BLUE: hsl(236, 100%, 87%);
+
+  /* --------- FONT STYLES ----------- */
+  --MAIN-FONT-FAMILY: 'Rubik', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --MAIN-FONT-SIZE: 1.125rem;
+
+  /* --------- BORDER RADIUS ------------- */
+  --MAIN-BORDER-RADIUS: 0 0 15px 15px;
+  --DASHBOARD-BORDER-RADIUS: 20px;
+}
+
+body {
+  font: var(--MAIN-FONT-SIZE) var(--MAIN-FONT-FAMILY);
+  color: var(--MAIN-FONT-COLOR);
+  background: var(--BODY-BACKGROUND);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  margin: 2rem;
+  grid-template-areas: 
+  'main-dashboard dashboard dashboard dashboard'
+  'main-dashboard dashboard dashboard dashboard'
+  ;
+}
+
+/* MAIN DASHBOARD STYLES */
+.profile-pic {
+  width: 100px;
+  border: 4px solid var(--MAIN-FONT-COLOR);
+  border-radius: 50%;
+  margin: 0 0 2rem;
+}
+
+.schedule-div {
+  padding: 2rem;
+  transition: background-color .3s;
+}
+
+.main-dashboard {
+  border-radius: var(--DASHBOARD-BORDER-RADIUS);
+  grid-area: main-dashboard;
+}
+
+.outer-main-dashboard {
+  border-radius: var(--DASHBOARD-BORDER-RADIUS);
+  grid-area: dashboard;
+}
+
+.inner-main-dashboard {
+  background-color: var(--MAIN-DASHBOARD-HCOLOR);
+  padding: 2rem;
+  border-radius: var(--DASHBOARD-BORDER-RADIUS);
+  position: relative;
+  z-index: 1;
+  padding-bottom: 2.5rem;
+}
+
+.report-for-paragraph {
+  font: 1rem var(--MAIN-FONT-FAMILY);
+  color: var(--PALE-BLUE);
+  margin: .7rem 0;
+}
+
+.report-name {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.schedule-div {
+  background-color: var(--DASH-BOARD-BG);
+  border-radius: var(--MAIN-BORDER-RADIUS);
+  position: relative;
+  margin-top: -1rem;
+}
+
+.schedule-div p {
+  margin: 1.5rem 0;
+}
+
+.selected-schedule {
+  color: var(--PALE-BLUE);
+}
+
+/* OTHER DASHBOARD STYLES */
+
+.activity-div {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.activity-icon {
+  width: 65px;
+  height: auto;
+  margin: -.8rem 1rem 0;
+}
+
+.activity-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.more-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  transition: background-color .3s;
+}
+
+.outer-dashboard {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: var(--DASHBOARD-BORDER-RADIUS);
+}
+
+.outer-dashboard:nth-of-type(2) .activity-div {
+  background-color: var(--WORK-HCOLOR);
+}
+.outer-dashboard:nth-of-type(3) .activity-div {
+  background-color: var(--PLAY-HCOLOR);
+}
+.outer-dashboard:nth-of-type(4) .activity-div {
+  background-color: var(--STUDY-HCOLOR);
+}
+.outer-dashboard:nth-of-type(5) .activity-div {
+  background-color: var(--EXERCISE-HCOLOR);
+}
+.outer-dashboard:nth-of-type(6) .activity-div {
+  background-color: var(--SOCIAL-HCOLOR);
+}
+.outer-dashboard:nth-of-type(7) .activity-div {
+  background-color: var(--SELF-CARE-HCOLOR);
+}
+
+.inner-dashboard {
+  background-color: var(--DASH-BOARD-BG);
+  padding: 1rem 2rem;
+  border-radius: var(--DASHBOARD-BORDER-RADIUS);
+  margin-top: 35px; /* DECIDES THE DASHBOARD HEAD HEIGHT */
+  transition: background-color .3s;
+}
+
+.outer-dashboard:nth-of-type(5) .activity-div {
+  padding: .5rem 0 1rem;
+}
+
+.inner-dashboard div {
+  margin: 1rem 0;
+}
+
+.hrs-paragraph {
+  font-size: 3rem;
+}
+
+.last-activity {
+  color: var(--PALE-BLUE);
+  font-size: .8rem;
+}
+
+/* --------------- HOVER STYLES ---------------- */
+
+
+.inner-dashboard:hover {
+  cursor: pointer;
+  background-color: var(--DASHBOARD-HOVER);
+}
+
+.more-div:hover {
+  background-color: var(--DASH-BOARD-BG);
+}
+
+.schedule-div p:hover {
+  cursor: pointer;
+  color: var(--PALE-BLUE);
+}
+
+
+/* -------------- MEDIA QUERIES ---------------- */
+
+/* MEDIUM SIZE */
+@media screen and (max-width: 1000px) {
+
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    'main-dashboard dashboard'
+    'main-dashboard dashboard'
+    ;
+  }
+
+  .inner-main-dashboard {
+    padding-bottom: 1rem;
+  }
+
+  .report-name {
+    font-size: 3.5rem;
+  }
+}
+
+/* SMALL SIZE */
+
+@media screen and (max-width: 600px) {
+  .main-container {
+    grid-template-columns: 400px;
+    grid-template-areas: 
+    'main-dashboard'
+    'dashboard'
+    ;
+    margin: 2rem 0;
+  }
+
+  .inner-main-dashboard {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .profile-pic {
+    width: 80px;
+    margin: 0;
+  }
+
+  .report-name {
+    font-size: 1.5rem;
+  }
+
+  .inner-dashboard div {
+    margin: .5rem 0 0;
+  }
+
+  .schedule-div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hrs-paragraph {
+    font-size: 2rem;
+  }
+
+  .last-hrs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* EXTRA SMALL */
+
+@media screen and (max-width: 380px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}

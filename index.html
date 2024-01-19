@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alleared">
+  <meta name="description" content="Frontendmentor JavaScript Junior challenge coded by Alleared">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Time tracking dashboard | FrontendMentor</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+
+  <main>
+    <div class="main-container">
+
+      <div class="main-dashboard">
+        <div class="outer-main-dashboard">
+          <div class="inner-main-dashboard">
+            <div>
+              <img class="profile-pic" src="images/image-jeremy.png" alt="Jeremy Profile Picture">
+            </div>
+            <div>
+              <p class="report-for-paragraph">Report for</p>
+              <p class="report-name">Jeremy Robson</p>
+            </div>
+          </div>
+
+          <div class="schedule-div">
+            <p class="js-schedule js-daily-schedule">Daily</p>
+            <p class="selected-schedule js-schedule js-weekly-schedule">Weekly</p>
+            <p class="js-schedule js-monthly-schedule">Monthly</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="outer-dashboard">
+        <div class="activity-div">
+          <img class="activity-icon" src="images/icon-work.svg" alt="Work icon">
+        </div>
+        <div class="inner-dashboard">
+          <div class="activity-container">
+            <div>
+              <p>Work</p>
+            </div>
+            <div class="more-div">
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+            </div>
+          </div>
+          <div class="last-hrs-container">
+            <div>
+              <p class="hrs-paragraph js-work-hours">32hrs</p>
+            </div>
+            <div>
+              <span class="last-activity js-last-activity">Last Week &dash;</span> 
+              <span class="last-activity js-previous-work-hours">36hrs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="outer-dashboard">
+        <div class="activity-div">
+          <img class="activity-icon" src="images/icon-play.svg" alt="Play icon">
+        </div>
+        <div class="inner-dashboard">
+          <div class="activity-container">
+            <div>
+              <p>Play</p>
+            </div>
+            <div class="more-div">
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+            </div>
+          </div>
+          <div class="last-hrs-container">
+            <div>
+              <p class="hrs-paragraph js-play-hours">10hrs</p>
+            </div>
+            <div>
+              <span class="last-activity js-last-activity">Last Week &dash;</span> 
+              <span class="last-activity js-previous-play-hours">8hrs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="outer-dashboard">
+        <div class="activity-div">
+          <img class="activity-icon" src="images/icon-study.svg" alt="Study icon">
+        </div>
+        <div class="inner-dashboard">
+          <div class="activity-container">
+            <div>
+              <p>Study</p>
+            </div>
+            <div class="more-div">
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+            </div>
+          </div>
+          <div class="last-hrs-container">
+            <div>
+              <p class="hrs-paragraph js-study-hours">4hrs</p>
+            </div>
+            <div>
+              <span class="last-activity js-last-activity">Last Week &dash;</span>
+              <span class="last-activity js-previous-study-hours">7hrs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="outer-dashboard">
+        <div class="activity-div">
+          <img class="activity-icon" src="images/icon-exercise.svg" alt="Exercise icon">
+        </div>
+        <div class="inner-dashboard">
+          <div class="activity-container">
+            <div>
+              <p>Exercise</p>
+            </div>
+            <div class="more-div">
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+            </div>
+          </div>
+          <div class="last-hrs-container">
+            <div>
+              <p class="hrs-paragraph js-exercise-hours">4hrs</p>
+            </div>
+            <div>
+              <span class="last-activity js-last-activity">Last Week &dash;</span>
+              <span class="last-activity js-previous-exercise-hours">5hrs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="outer-dashboard">
+        <div class="activity-div">
+          <img class="activity-icon" src="images/icon-social.svg" alt="Social icon">
+        </div>
+        <div class="inner-dashboard">
+          <div class="activity-container">
+            <div>
+              <p>Social</p>
+            </div>
+            <div class="more-div">
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+            </div>
+          </div>
+          <div class="last-hrs-container">
+            <div>
+              <p class="hrs-paragraph js-social-hours">5hrs</p>
+            </div>
+            <div>
+              <span class="last-activity js-last-activity">Last Week &dash;</span>
+              <span class=" last-activity js-previous-social-hours">10hrs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="outer-dashboard">
+        <div class="activity-div">
+          <img class="activity-icon" src="images/icon-self-care.svg" alt="Self Care icon">
+        </div>
+        <div class="inner-dashboard">
+          <div class="activity-container">
+            <div>
+              <p>Self Care</p>
+            </div>
+            <div class="more-div">
+              <img src="images/icon-ellipsis.svg" alt="Ellipsis icon">
+            </div>
+          </div>
+          <div class="last-hrs-container">
+            <div>
+              <p class="hrs-paragraph js-selfCare-hours">2hrs</p>
+            </div>
+            <div>
+              <span class="last-activity js-last-activity">Last Week &dash;</span>
+              <span class="last-activity js-previous-selfCare-hours">2hrs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Alleared</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
